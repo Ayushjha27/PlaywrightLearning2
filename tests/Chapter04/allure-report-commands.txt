@@ -1,0 +1,83 @@
+Allure Report with Playwright [Screenshots, Videos & Traces]
+
+=> Allure is a reporting tool that generates a detailed and interactive test report showing
+ test results, steps, screenshots, videos, and traces.
+
+Step1: Install Allure Report command-line tool
+npm install -g --save-dev allure-commandline
+
+Step2: Install the Allure Playwright adapter
+npm install --save-dev allure-playwright
+
+Step3: Add below config in playwright.config.js file
+reporter: [
+  ['html'],
+  ['allure-playwright']
+],
+
+
+Step4: Run Playwright tests
+npx playwright test            //// npx playwright test tests/login.spec.ts
+
+
+Step5: Generate Allure Report
+allure generate allure-results --clean
+
+Step6: Open allure report
+allure open
+
+
+
+
+You only need to install allure-playwright( step 2) once for this project. You install these once per project/environment
+
+--------------------------------------------------------------------------------------------------
+
+Agar pehle:
+
+TC1
+TC2
+TC3
+
+run kiye the, aur ab sirf TC4 run kiya:
+
+npx playwright test tests/TC4.spec.ts
+
+then:
+
+allure generate allure-results --clean
+
+👉 TC1, TC2, TC3 report se gayab NAHI honge, agar unke old results allure-results mein pade hain.
+
+Toh --clean karta kya hai?
+
+Bas purana allure-report hata ke naya allure-report banata hai.
+
+That's it. 🫡
+
+allure-results
+TC1 TC2 TC3 TC4
+       ↓
+--clean
+       ↓
+allure-report
+TC1 TC2 TC3 TC4
+Agar report mein SIRF TC4 chahiye:
+
+Pehle:
+
+rmdir /s /q allure-results
+
+Then:
+
+npx playwright test tests/TC4.spec.ts
+allure generate allure-results --clean
+allure open
+
+Now report:
+
+TC4 ✅
+
+One-line yaad rakh:
+
+--clean = old report folder ko clean karke fresh report banana, old test results ko delete karna nahi.

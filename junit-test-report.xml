@@ -1,0 +1,15 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="6.054289999999999">
+<testsuite name="Chapter04\07_Checkbox_RadioButton_Test.spec.ts" timestamp="2026-09-15T13:28:03.980Z" hostname="Microsoft Edge" tests="1" failures="0" skipped="0" time="2.993" errors="0">
+<testcase name="Working with checkbox &amp; radion buttons in playwright" classname="Chapter04\07_Checkbox_RadioButton_Test.spec.ts" time="2.993">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\Chapter04-07_Checkbox_Radi-ca2c6-adion-buttons-in-playwright-Microsoft-Edge\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\Chapter04-07_Checkbox_Radi-ca2c6-adion-buttons-in-playwright-Microsoft-Edge\video.webm]]
+
+[[ATTACHMENT|test-results\Chapter04-07_Checkbox_Radi-ca2c6-adion-buttons-in-playwright-Microsoft-Edge\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
